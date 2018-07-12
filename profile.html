@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Let's Chat</title>
+	<link rel="script" href="myscript.js">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<!-- Metadata's -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+
+	<!-- Script Tag -->
+	<script>
+	   function chooseFile() {
+	      $("#fileInput").click();
+	   }
+	   function readURL(input) {
+    		if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+
+	        reader.onload = function (e) {
+	            $('#profileImage').attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    		}
+		}
+
+
+	</script>
+
+</head>
+<body>
+	<!-- Top Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar1">
+	  	<a class="navbar-brand" href="index.html">
+	  		<img src="logo.png" width="30" height="30" class="d-inline-block align-top logoName" alt="logo">Let's Chat
+	  	</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+	    		<li class="nav-item">
+	        		<a class="nav-link" href="index.html">Chats <span class="badge badge-primary badge-pill" style="background-color:grey;">3</span></a>
+	    		</li>
+	    		<li class="nav-item">
+	        		<a class="nav-link" href="status.html">Status <i class="fas fa-circle"></i></a>
+	    		</li>
+	    		<li class="nav-item">
+	        		<a class="nav-link" href="calls.html">Calls</a>
+	      		</li>
+	      		<li class="nav-item dropdown active">
+	        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+	        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	         		<a class="dropdown-item disabled" href="#">New Chat</a>
+	          		<a class="dropdown-item disabled" href="#">New Group</a>
+	          		<a class="dropdown-item disabled" href="#">Privacy</a>
+	          		<div class="dropdown-divider"></div>
+	          		<a class="dropdown-item active" href="profile.html">Profile Settings</a>
+	        	</div>
+	      		</li>
+
+	    	</ul>
+	    	<form class="form-inline my-2 my-lg-0">
+	      		<input class="form-control mr-sm-2" type="search" placeholder="Chat Search" aria-label="Search">
+	      		<button class="btn btn-outline-success my-2 my-sm-0 button1" type="submit">Search</button>
+	    	</form>
+	    </div>
+	</nav>
+	<!-- Top Navbar Closed -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<img src="https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/100.png" class="rounded-circle profileImage" alt="user" height="250px" width="250px" id="profileImage">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center profileName">
+				<strong>Vivian Charles</strong></br>
+				<strong>+91-1234567890</strong>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 text-center profileBTN">
+			<label for="image_uploads" class="btn btn-success">Choose Image to Upload</label>
+        	</div>
+        	<div class="col-sm-12"><input type='file' id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" style="visibility: hidden;" onchange="readURL(this);"></div>
+		</div>
+
+
+	</div>
+	<!-- Main Body Chat-->
+	
+
+	<!-- Script Tags -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
